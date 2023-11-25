@@ -1,12 +1,26 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./*.{html,js}"],
-  theme: {
-    extend: {},
-  },
-  daisyui: {
-    themes: ["light", "dark", "cupcake", "dim"]
-  },
-  plugins: [require("daisyui")],
+    content: ["./*.{html,js}"],
+    theme: {
+        extend: {},
+    },
+    daisyui: {
+        themes: [
+            {
+                myTheme: {
+                    "primary": "#a991f7",
+                    "secondary": "#f6d860",
+                    "accent": "#37cdbe",
+                    "neutral": "#3d4451",
+                    "base-100": "#ffffff",
+                },
+            },
+            "dark",
+            "cupcake",
+            "autumn",
+            "valentine",
+        ],
+    },
+    plugins: [require("daisyui")],
 }
 
