@@ -173,6 +173,31 @@
 
     </div>
 </div>
+
+
+        <!-- Chat -->
+        <button id="chatButton" onclick="toggleChat()" class="bg-red-600 hover:bg-red-300 text-white font-bold py-2 px-4 rounded-full fixed bottom-16 right-4 z-50">
+            Chat
+        </button>
+    
+        <div id="chatContainer" class="hidden w-96 fixed bottom-[100px] right-4 bg-white rounded shadow-lg" style="height: 400px;">
+            <div id="chat" class="overflow-y-auto p-4" style="height: calc(100% - 68px);">
+               
+            </div>
+            <div class="border-t p-4">
+                <input type="text" id="messageInput" class="border rounded w-full p-2" placeholder="Type a message...">
+                <button onclick="sendMessage()" class="bg-red-600 hover:bg-red-300 text-white font-bold py-2 px-4 rounded block mt-2 w-full">
+                    Send
+                </button>
+                <button onclick="toggleChat()" class="bg-red-500 hover: bg-red-300 text-white font-bold py-1 px-2 rounded-full absolute top-2 right-2">
+                    close
+                </button>
+            </div>
+        </div>
+
+    <script src="chat.js"></script>
+
+
 <footer class="footer flex justify-center p-4 bg-slate-900 text-neutral-content fixed bottom-0 left-0 w-full">
     <aside class="items-center grid-flow-col">
         <p>© 2023 INFO3130</p>
