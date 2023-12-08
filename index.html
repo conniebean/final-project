@@ -2,7 +2,7 @@
 <html lang="en" data-theme="nord">
 <head>
     <meta charset="UTF-8">
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.4.5/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.4.5/dist/full.min.css" rel="stylesheet" type="text/css"/>
     <script src="https://cdn.tailwindcss.com"></script>
     <title>First Bank Canada</title>
     <link href="./dist/output.css" rel="stylesheet">
@@ -13,7 +13,7 @@
         <a class="btn btn-ghost text-xl text-gray-200">First Bank Canada</a>
         <div class="avatar">
             <div class="w-12 border border-gray-600 drop-shadow-lg rounded-full">
-                <img src="assets/FBC_Logo.jpg"  alt="fbc logo"/>
+                <img src="assets/FBC_Logo.jpg" alt="fbc logo"/>
             </div>
         </div>
     </div>
@@ -31,24 +31,35 @@
                     <label class="label">
                         <span class="label-text">Username or Access Card</span>
                     </label>
-                    <input placeholder="username or access card" class="input input-bordered" required />
+                    <input placeholder="username or access card" class="input input-bordered font-mono" required/>
                 </div>
                 <div class="form-control">
-                    <label class="label">
+                    <label class="label" for="password">
                         <span class="label-text">Password</span>
                     </label>
-                    <input type="password" placeholder="password" class="input input-bordered" required />
+                    <div class="relative w-full">
+                        <div class="absolute inset-y-0 right-0 flex items-center px-2">
+                            <input class="hidden js-password-toggle" id="toggle" type="checkbox"/>
+                            <label class="bg-gray-300 hover:bg-gray-400 rounded px-2 py-1 text-sm text-gray-600 font-mono cursor-pointer js-password-label"
+                                   for="toggle">show</label>
+                        </div>
+                        <input class="input input-bordered border-2 rounded w-full py-3 px-3 leading-tight text-gray-700 pr-16 font-mono js-password"
+                               id="password" type="password" autocomplete="off" placeholder="password"
+                        />
+                    </div>
                     <label class="label">
                         <a href="#" class="label-text-alt link link-hover">Forgot password?</a>
                     </label>
                 </div>
                 <div class="form-control mt-6">
-                    <a class="btn btn-primary border rounded-xl bg-gradient-to-r from-red-500 to-red-400" href="home.html">Login</a>
+                    <a class="btn btn-primary border rounded-xl bg-gradient-to-r from-red-500 to-red-400"
+                       href="home.html">Login</a>
                 </div>
             </form>
         </div>
     </div>
 </div>
+<script src="hidePassword.js"></script>
 <footer class="footer flex justify-center p-4 bg-slate-900 text-neutral-content fixed bottom-0 left-0 w-full">
     <aside class="items-center grid-flow-col">
         <p>© 2023 INFO3130</p>
